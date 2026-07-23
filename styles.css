@@ -462,7 +462,7 @@ body {
 
 .portrait-stage {
   width: min(100%, 470px);
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1;
 }
 
 .portrait-frame {
@@ -477,7 +477,7 @@ body {
   mix-blend-mode: screen;
 }
 
-.portrait-frame img { object-fit: contain; }
+.portrait-frame img { object-fit: cover; }
 .orbit-one { inset: 7% 0; }
 .orbit-two { inset: 22% 10%; }
 
