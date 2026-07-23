@@ -3,19 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Edwiin — UI/UX Designer. Thoughtful systems and clear digital experiences.">
-  <meta name="theme-color" content="#070a12">
+  <meta name="description" content="Edwiin — UI/UX Designer turning complex product problems into clear, considered digital experiences.">
+  <meta name="theme-color" content="#05070d">
   <title>Edwiin — UI/UX Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3d-glass-1">
 </head>
 <body>
   <a class="skip-link" href="#work">Skip to selected work</a>
   <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="ambient-light ambient-light-one" aria-hidden="true"></div>
+  <div class="ambient-light ambient-light-two" aria-hidden="true"></div>
 
-  <header class="site-header">
+  <header class="site-header liquid-surface">
     <a class="wordmark magnetic" href="#top" aria-label="Edwiin, home">Edwiin<span>.</span></a>
     <nav aria-label="Primary navigation">
       <a href="#work">Work</a>
@@ -26,104 +28,157 @@
 
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
+      <div class="hero-heading" aria-hidden="true">
+        <span>CLARITY</span>
+        <span>BY DESIGN</span>
+      </div>
+
+      <div class="hero-meta">
         <p class="availability"><span></span> Available for UI/UX opportunities</p>
-        <h1 id="hero-title">I design clarity<br>into complexity.</h1>
-        <p class="hero-intro">UI/UX Designer shaping thoughtful systems and precise digital experiences—from first insight to final interaction.</p>
+        <p>Edwiin<br>UI/UX Designer</p>
+      </div>
+
+      <div class="hero-copy">
+        <h1 id="hero-title">Thoughtful systems.<br>Clear experiences.</h1>
+        <p>I turn complex product intent into precise interfaces—from early insight to final interaction.</p>
         <div class="hero-actions">
-          <a class="primary-action magnetic" href="#work">Explore selected work <span aria-hidden="true">↘</span></a>
-          <a class="text-action" href="mailto:theedwiin@gmail.com">theedwiin@gmail.com</a>
+          <a class="primary-action magnetic" href="#work">View selected work <span aria-hidden="true">↘</span></a>
+          <a class="text-action" href="#profile">View résumé</a>
         </div>
       </div>
 
-      <div class="portrait-stage" data-portrait aria-label="Interactive illustrated portrait of Edwiin">
-        <div class="portrait-orbit orbit-one" aria-hidden="true"></div>
-        <div class="portrait-orbit orbit-two" aria-hidden="true"></div>
-        <div class="portrait-frame">
-          <img src="assets/edwiin-avatar.jpg" alt="Full-body Q-style collectible figure of Edwiin wearing black glasses, a red T-shirt, and white shorts">
+      <div class="character-shell liquid-surface" data-character-shell>
+        <canvas id="character-canvas" role="img" aria-label="Interactive real-time 3D figure of Edwiin"></canvas>
+        <img class="character-fallback" src="assets/edwiin-character-cutout.png" alt="Q-style figure of Edwiin wearing black glasses, a red T-shirt, and white shorts">
+        <div class="character-specular" aria-hidden="true"></div>
+        <div class="scene-status" aria-hidden="true">
+          <span>REAL-TIME 3D</span>
+          <span>MOVE TO EXPLORE</span>
         </div>
-        <p class="portrait-note">Move your cursor<br>to meet the designer.</p>
       </div>
 
-      <div class="scroll-cue" aria-hidden="true"><span></span> Scroll to explore</div>
+      <div class="hero-index" aria-hidden="true">
+        <span>Scroll</span>
+        <div></div>
+        <span>Selected work below</span>
+      </div>
     </section>
 
-    <section class="statement reveal" aria-label="Design philosophy">
-      <p>Good design should feel inevitable.</p>
-      <h2>I translate product intent into interfaces that are useful, legible, and quietly memorable.</h2>
+    <section class="manifesto" aria-label="Design philosophy">
+      <p class="manifesto-side reveal">Design should reduce the distance between intention and action.</p>
+      <h2 class="reveal">I make complexity feel <span>understood</span>—not merely simplified.</h2>
     </section>
 
     <section class="work" id="work" aria-labelledby="work-title">
-      <div class="section-heading reveal">
+      <header class="work-header reveal">
         <h2 id="work-title">Selected work</h2>
-        <p>Systems, identity, and interaction—shown through the decisions behind them.</p>
-      </div>
+        <p>Two focused studies in systems, visual language, and interaction. Each project is framed through the decisions behind it.</p>
+      </header>
 
-      <article class="project reveal">
-        <a class="project-visual" href="#case-color" aria-label="View Color System Methodology case study">
-          <img src="assets/color-system.png" alt="A structured collection of color system diagrams and interface applications" loading="lazy">
-          <span class="project-open" aria-hidden="true">View case ↗</span>
+      <article class="project project-color">
+        <div class="project-number" aria-hidden="true">01</div>
+        <a class="project-visual reveal" href="#case-color" aria-label="Read the full Color System Methodology project">
+          <img src="assets/color-system.png" alt="Color system diagrams and interface applications" loading="lazy">
+          <span class="project-action liquid-surface">Full project <span aria-hidden="true">↗</span></span>
         </a>
-        <div class="project-info">
-          <p>Design system · Research</p>
-          <h3>Color System Methodology</h3>
-          <p>A rigorous approach to building scalable semantic color—from perceptual foundations to product-ready tokens.</p>
+        <div class="project-caption reveal">
+          <div>
+            <p>Design system · Research</p>
+            <h3>Color System<br>Methodology</h3>
+          </div>
+          <p>A scalable semantic color framework built from perceptual foundations, accessibility constraints, and real interface states.</p>
         </div>
       </article>
 
-      <article class="project project-reverse reveal">
-        <a class="project-visual" href="#case-brand" aria-label="View Brand in Motion case study">
-          <img src="assets/brand-motion.png" alt="Blue energy tunnel graphic developed for a digital brand motion system" loading="lazy">
-          <span class="project-open" aria-hidden="true">View case ↗</span>
+      <article class="project project-motion">
+        <div class="project-number" aria-hidden="true">02</div>
+        <a class="project-visual reveal" href="#case-brand" aria-label="Read the full Brand in Motion project">
+          <img src="assets/brand-motion.png" alt="Blue energy tunnel developed for a digital brand motion system" loading="lazy">
+          <span class="project-action liquid-surface">Full project <span aria-hidden="true">↗</span></span>
         </a>
-        <div class="project-info">
-          <p>Brand experience · Motion</p>
-          <h3>Brand in Motion</h3>
-          <p>A flexible visual language that turns a static identity into a distinctive, coherent digital experience.</p>
+        <div class="project-caption reveal">
+          <div>
+            <p>Brand experience · Motion</p>
+            <h3>Brand in<br>Motion</h3>
+          </div>
+          <p>A flexible visual language that gives a static identity rhythm, depth, and continuity across digital surfaces.</p>
         </div>
       </article>
     </section>
 
-    <section class="case-study reveal" id="case-color" aria-labelledby="case-color-title">
-      <div>
-        <p class="case-label">Case study preview</p>
-        <h2 id="case-color-title">From raw color to a usable product language.</h2>
-      </div>
-      <div class="case-body">
-        <p>The project connects perceptual color models, accessibility constraints, semantic roles, and component states into one maintainable system.</p>
-        <dl>
-          <div><dt>Focus</dt><dd>System thinking</dd></div>
-          <div><dt>Deliverables</dt><dd>Tokens, guidance, applications</dd></div>
-          <div><dt>Role</dt><dd>Research & design</dd></div>
-        </dl>
-      </div>
+    <section class="case-ledger" aria-label="Project details">
+      <article class="case-study" id="case-color" aria-labelledby="case-color-title">
+        <div class="case-title reveal">
+          <p>Color System Methodology</p>
+          <h2 id="case-color-title">From raw color to a usable product language.</h2>
+        </div>
+        <div class="case-content reveal">
+          <p>The project connects perceptual color models, accessibility constraints, semantic roles, and component states into one maintainable system.</p>
+          <dl>
+            <div><dt>Focus</dt><dd>System thinking</dd></div>
+            <div><dt>Deliverables</dt><dd>Tokens, guidance, applications</dd></div>
+            <div><dt>Role</dt><dd>Research & design</dd></div>
+          </dl>
+          <a href="mailto:theedwiin@gmail.com?subject=Color%20System%20Methodology%20case%20study">Request complete walkthrough <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="case-study" id="case-brand" aria-labelledby="case-brand-title">
+        <div class="case-title reveal">
+          <p>Brand in Motion</p>
+          <h2 id="case-brand-title">Giving a digital identity energy and continuity.</h2>
+        </div>
+        <div class="case-content reveal">
+          <p>A motion-led identity exploration built around rhythm, depth, and recognizable blue light—adaptable across campaign and product surfaces.</p>
+          <dl>
+            <div><dt>Focus</dt><dd>Visual language</dd></div>
+            <div><dt>Deliverables</dt><dd>Motion directions, key visuals</dd></div>
+            <div><dt>Role</dt><dd>Concept & design</dd></div>
+          </dl>
+          <a href="mailto:theedwiin@gmail.com?subject=Brand%20in%20Motion%20case%20study">Request complete walkthrough <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
     </section>
 
-    <section class="case-study reveal" id="case-brand" aria-labelledby="case-brand-title">
-      <div>
-        <p class="case-label">Case study preview</p>
-        <h2 id="case-brand-title">Giving a digital identity energy and continuity.</h2>
+    <section class="approach" aria-labelledby="approach-title">
+      <div class="approach-intro reveal">
+        <p>How I work</p>
+        <h2 id="approach-title">Clear decisions at every layer.</h2>
       </div>
-      <div class="case-body">
-        <p>A motion-led identity exploration built around rhythm, depth, and recognizable blue light—adaptable across campaign and product surfaces.</p>
-        <dl>
-          <div><dt>Focus</dt><dd>Visual language</dd></div>
-          <div><dt>Deliverables</dt><dd>Motion directions, key visuals</dd></div>
-          <div><dt>Role</dt><dd>Concept & design</dd></div>
-        </dl>
-      </div>
+      <ol class="approach-list">
+        <li class="reveal">
+          <span>01</span>
+          <h3>Understand</h3>
+          <p>Find the real friction through research, constraints, and product context.</p>
+        </li>
+        <li class="reveal">
+          <span>02</span>
+          <h3>Frame</h3>
+          <p>Turn scattered inputs into a focused model the team can act on.</p>
+        </li>
+        <li class="reveal">
+          <span>03</span>
+          <h3>Prototype</h3>
+          <p>Make interaction tangible early and use feedback to sharpen the direction.</p>
+        </li>
+        <li class="reveal">
+          <span>04</span>
+          <h3>Systemize</h3>
+          <p>Carry the decision into reusable patterns, states, and implementation detail.</p>
+        </li>
+      </ol>
     </section>
 
     <section class="profile" id="profile" aria-labelledby="profile-title">
-      <div class="profile-intro reveal">
+      <div class="profile-heading reveal">
         <p>Profile</p>
         <h2 id="profile-title">Professional in process.<br>Precise in execution.</h2>
       </div>
-      <div class="profile-grid">
+      <div class="profile-layout">
         <div class="profile-copy reveal">
-          <p>I’m Edwiin, a UI/UX designer focused on turning complex requirements into clear systems and polished product experiences.</p>
-          <p>I work across research, interaction, visual design, and design systems—with careful attention to the details that make a product feel coherent.</p>
-          <a class="primary-action magnetic" href="mailto:theedwiin@gmail.com?subject=UI%2FUX%20Opportunity">Contact me <span aria-hidden="true">↗</span></a>
+          <p>I’m Edwiin, a UI/UX designer focused on turning complex requirements into coherent systems and polished product experiences.</p>
+          <p>I work across research, interaction, visual design, and design systems—with close attention to the details that make a product feel intentional.</p>
+          <a class="primary-action magnetic" href="mailto:theedwiin@gmail.com?subject=UI%2FUX%20Opportunity">Start a conversation <span aria-hidden="true">↗</span></a>
         </div>
         <div class="resume reveal" aria-label="Résumé summary">
           <div class="resume-row">
@@ -144,7 +199,10 @@
 
     <section class="contact" aria-labelledby="contact-title">
       <p class="reveal">Have a role where thoughtful design matters?</p>
-      <a class="contact-link magnetic reveal" id="contact-title" href="mailto:theedwiin@gmail.com">Let’s make it clear.<span aria-hidden="true">↗</span></a>
+      <a class="contact-link magnetic reveal" id="contact-title" href="mailto:theedwiin@gmail.com">
+        Let’s make it clear.<span aria-hidden="true">↗</span>
+      </a>
+      <p class="contact-email reveal">theedwiin@gmail.com</p>
     </section>
   </main>
 
@@ -152,6 +210,8 @@
     <p>Edwiin · UI/UX Designer</p>
     <p>© <span id="year"></span> Built with intention.</p>
   </footer>
-  <script src="script.js"></script>
+
+  <script src="script.js?v=3d-glass-1"></script>
+  <script type="module" src="webgl-character.js?v=3d-glass-1"></script>
 </body>
 </html>
