@@ -20,12 +20,27 @@ if (!reducedMotion) {
 
 if (finePointer && !reducedMotion) {
   const cursor = document.querySelector(".cursor-dot");
+  const eyeTracker = document.querySelector("[data-eye-tracker]");
+  const pupils = [...document.querySelectorAll(".pupil")];
   const magnets = document.querySelectorAll(".magnetic");
 
   window.addEventListener("pointermove", (event) => {
     cursor.style.opacity = "1";
     cursor.style.left = `${event.clientX}px`;
     cursor.style.top = `${event.clientY}px`;
+
+    const rect = eyeTracker.getBoundingClientRect();
+    const centerX = rect.left + rect.width * 0.495;
+    const centerY = rect.top + rect.height * 0.33;
+    const angle = Math.atan2(event.clientY - centerY, event.clientX - centerX);
+    const distance = Math.min(3.6, Math.hypot(event.clientX - centerX, event.clientY - centerY) / 70);
+    const x = Math.cos(angle) * distance;
+    const y = Math.sin(angle) * distance * 0.72;
+
+    pupils.forEach((pupil) => {
+      pupil.style.setProperty("--eye-x", `${x}px`);
+      pupil.style.setProperty("--eye-y", `${y}px`);
+    });
   }, { passive: true });
 
   document.querySelectorAll("a").forEach((link) => {
@@ -38,7 +53,7 @@ if (finePointer && !reducedMotion) {
       const rect = element.getBoundingClientRect();
       const x = event.clientX - rect.left - rect.width / 2;
       const y = event.clientY - rect.top - rect.height / 2;
-      element.style.transform = `translate3d(${x * 0.1}px, ${y * 0.1}px, 0)`;
+      element.style.transform = `translate3d(${x * 0.08}px, ${y * 0.08}px, 0)`;
     });
     element.addEventListener("pointerleave", () => {
       element.style.transform = "";

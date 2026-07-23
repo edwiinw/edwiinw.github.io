@@ -1,30 +1,30 @@
-# Design System
+# 设计系统
 
-## Direction
+## 方向
 
-A restrained midnight portfolio with a single cobalt signal color, precise typography, and one high-density real-time 3D focal point. The long-page rhythm uses oversized statements and cinematic project imagery without copying a conventional résumé template.
+面向招聘方的简体中文 UI/UX 作品集。视觉以黑白为底，叠加酸性绿、紫与洋红的色差效果、巨大中文标题和高对比内容分区。排版保持编辑感与信息清晰度，不沿用传统简历模板，也不复制参考作品的具体构图。
 
-## Color
+## 色彩
 
-- Canvas: `oklch(16% 0.025 260)`
-- Surface: `oklch(20% 0.025 260)`
-- Text: `oklch(96% 0.008 255)`
-- Muted text: `oklch(74% 0.018 255)`
-- Accent: `oklch(63% 0.21 258)`
-- Hairline: `oklch(100% 0 0 / 0.14)`
+- 画布：`oklch(10% 0.015 285)`
+- 正文：`oklch(97% 0 0)`
+- 酸性绿：`oklch(90% 0.25 128)`
+- 紫色：`oklch(58% 0.28 300)`
+- 洋红：`oklch(67% 0.29 350)`
+- 电光蓝：`oklch(68% 0.23 250)`
 
-## Typography
+## 字体
 
-Use Manrope as a single deliberate family with strong scale contrast. Display text is compact and calm; body copy is open and highly readable.
+正文使用现代无衬线字体栈，标题采用极端放大的黑体字重。中文是主要信息语言；英文只作为视觉索引和专业领域标签。
 
-## Layout
+## 布局
 
-Full-viewport opening scene, generous negative space, asymmetric full-width project studies, a decision-led process ledger, and a compact résumé summary. Corners remain restrained at 14–16px.
+首屏使用不对称双栏，将巨大价值主张与静态人物并置。下方依次为能力宣言、精选项目、方法、履历和联系入口。项目采用整屏色块与编辑式网格，保留充足留白，不使用悬浮卡片堆叠。
 
-## Motion
+## 动效
 
-The portrait is rendered in a Three.js scene using a shallow-relief image mesh, real-time lighting, optical displacement, and translucent geometry. Cursor movement changes perspective and light position; magnetic links and soft section reveals support the rest of the page. All motion is disabled or simplified under `prefers-reduced-motion`.
+人物为静态透明图片，仅瞳孔以小幅度跟随鼠标。链接保留轻量磁吸反馈，内容进入视口时渐显。触屏设备和开启 `prefers-reduced-motion` 的用户不启用眼睛跟随与额外动效。
 
-## Material
+## 材质
 
-Liquid glass is reserved for the navigation, the 3D character stage, and compact interactive controls. Larger reading sections use open dark space and restrained tonal shifts so the glass remains meaningful rather than decorative.
+酸性表达来自色差、错位文字、锐利边界和局部高饱和色块。人物本身不使用背景容器、描边或玻璃舞台，让形象直接融入页面；界面避免廉价发光、厚重阴影和过量圆角。
